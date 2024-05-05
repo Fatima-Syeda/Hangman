@@ -1,30 +1,4 @@
-#----------------------------------- 
-
-# Assignment #3-3                         
-
-# Program name: Hangman                      
-
-#                                     
-
-# Name: Fatima Syeda (80388sye)              
-
-# Date: Apr. 25,2022                      
-
-#                                    
-
-# Description of assignment: 
-
-#   This program is a fun hangman game 
-
-#   which allows the user to solve  
-
-#   puzzles in different categories 
-
-#---------------------------------   
-
 import random 
-
- 
 
 #Source: GitHub Gist 
 
@@ -33,113 +7,62 @@ import random
 HANGMANPICS = [''' 
 
   +---+ 
-
   |   | 
-
       | 
-
       | 
-
       | 
-
       | 
-
 =========''', ''' 
 
   +---+ 
-
   |   | 
-
   O   | 
-
       | 
-
       | 
-
       | 
-
 =========''', ''' 
 
   +---+ 
-
   |   | 
-
   O   | 
-
   |   | 
-
       | 
-
       | 
-
 =========''', ''' 
 
   +---+ 
-
   |   | 
-
   O   | 
-
  /|   | 
-
       | 
-
       | 
-
 =========''', ''' 
 
   +---+ 
-
   |   | 
-
   O   | 
-
  /|\  | 
-
       | 
-
       | 
-
 =========''', ''' 
 
   +---+ 
-
   |   | 
-
   O   | 
-
  /|\  | 
-
  /    | 
-
       | 
-
 =========''', ''' 
 
   +---+ 
-
   |   | 
-
   O   | 
-
  /|\  | 
-
  / \  | 
-
       | 
-
 ========='''] 
 
  
-
- 
-
- 
-
- 
-
- 
-
 #Making a list of puzzles 
 
 movies = ["Beauty and the Beast", "Spider Man: No way home", "Encanto", "Divergent", "Moana"] 
@@ -194,9 +117,6 @@ while True:
 
   picker = random.randint(0,4) 
 
- 
-
-   
 
   #Display all the categories to the screen 
 
@@ -219,7 +139,6 @@ while True:
   print("{:^80}".format("-"*80)) 
 
   print() 
-
  
 
   #Error trap so the that user enters a valid option 
@@ -234,9 +153,7 @@ while True:
 
       print("Please choose a valid category from 1 to 4 or (0 to exit).") 
 
-      print() 
-
-         
+      print()          
 
   #If user enters 0, exit the program 
 
@@ -249,9 +166,6 @@ while True:
     break 
 
  
-
- 
-
   #Select a random puzzle based on what category the user enters, define the category 
 
   elif option == 1: 
@@ -301,7 +215,6 @@ while True:
   guessed = "" 
 
  
-
   #Add underscore to hidden for each uppercase character in puzzle 
 
   for i in range(len(puzzle)): 
@@ -362,10 +275,7 @@ while True:
 
         print("The category is {}.".format(category)) 
 
-         
-
- 
-
+        
         #Change the guess to uppercase 
 
         print("Guessed: {}".format(guessed.split())) 
@@ -386,7 +296,6 @@ while True:
 
             break 
 
-         
 
        
 
@@ -406,12 +315,7 @@ while True:
 
           print("Guess a different letter.") 
 
-          
-
- 
-
- 
-
+  
      
 
     #Store the users guesses in a string 
@@ -426,11 +330,6 @@ while True:
 
       break 
 
- 
-
-     
-
-     
 
     #If user's guess in found in puzzle 
 
@@ -448,10 +347,6 @@ while True:
 
                
 
-     
-
-      
-
     #If user enters the wrong guess, add 1 to counter and let them know 
 
     else: 
@@ -466,9 +361,6 @@ while True:
 
  
 
-    
-
-       
 
       #If the number of wrong guesses is 6, get out of the loop 
 
